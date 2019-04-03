@@ -8,25 +8,25 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 i have used angular cli version 6.2.9 to develop this peoject. I have used basic angular modules like&nbsp;
     ***formModule,\
     reactiveFormModule,\
-    commonModule***.\
+    commonModule***.
 ###
 for making admin pannel I used,\
     ***MatFormFieldModule,\
     MatInputModule,\
     MatCardModule,\
-    MatButtonModule***.\
+    MatButtonModule***.
 ###
 for making the Enquiry pannel i used,\
     ***MatCardModule,\
     MatFormFieldModule,\
     MatInputModule,\
     ngDragDropModule,\
-    MatButtonModule***.\
+    MatButtonModule***.
 ###
 for backend that will store blood data i used ***firebase***. and to connect firebase with angular i've used,\
     ***AngularFireModule,\
-    AngularFireDatabaseModule***.\
-
+    AngularFireDatabaseModule***.
+    
 ## the website
 
 i have used material library to create inputs-forms, buttons and cards&nbsp;
@@ -40,5 +40,6 @@ then app will highlight A+ in light green and {A-, O+, O-} in dark green , and w
 
 ## Plus point
 
-to optimize the app,  i have lazily loded the admin module, admin module will be loded only when the <<--url-->>/admin is typed.\
-
+To optimize the app,  i have lazily loded the admin module, admin module will be loded only when the <<--url-->>/admin is typed.\
+I have used material provided by google which gives very neet and clean styles.\
+i have used firebase as databse,  which provide very fast real-time databsse.
