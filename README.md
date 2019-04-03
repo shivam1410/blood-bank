@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Used Libraries or Frameworks
 
 ###
-i have used angular cli version 6.2.9 to develop this peoject. I have used basic angular modules like&nbsp;
+i have used angular cli version 6.2.9 to develop this peoject. I have used basic angular modules like,\
     ***formModule,\
     reactiveFormModule,\
     commonModule***.
