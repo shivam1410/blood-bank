@@ -1,0 +1,49 @@
+.main-card{
+    width: 200px;
+    height: 180px;
+}
+.container-fluid { max-width: 1200px; }
+
+
+.blood-card{
+    width: 20%;
+    padding: 2%;
+    margin: 2%;
+    height: 20%
+ }
+ .canDonate-card {
+     width: 120%;
+     height: 120%;
+     background-color: green;
+ }
+.canNotDonate-Card {
+    width: 120%;
+    height: 120%;
+    background-color: grey;
+}
+.notEnoughBlood {
+    width: 120%;
+    height: 120%;
+    background-color: yellow
+}
+.enqiry-form{
+    max-width: 30%;
+    margin: 2%;
+    /* padding: 10%;    */
+}
+.need-card {
+    width: 100%;
+    padding: 2%;
+    margin: 2%;
+    height: 100%;
+}
+/* .type-box { */
+    /* border: 1px solid black; */
+    /* margin-right: 1px; */
+    /* padding: 15%; */
+/* } */
+/* .value-box { */
+    /* border: 1px solid black; */
+    /* margin-left: 1px; */
+    /* padding: 15%; */
+/* } */

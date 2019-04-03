@@ -1,0 +1,52 @@
+<div style="max-width: 100vh;" class="container">
+  <div class="row" style="width: 100%">
+    <div *ngFor="let item of bloodData" class="blood-card">
+      <mat-card *ngIf="item.canDonate && !item.value" class=" d-flex justify-content-between"  [ngClass]="{'notEnoughBlood': 'item.value === 0' }">
+        <div>
+          {{item.type}}
+        </div>
+        <div  class="value-box">
+          {{item.value}}
+        </div>
+      </mat-card>
+      <mat-card *ngIf="item.canDonate && item.value" class=" d-flex justify-content-between" [ngClass]="{'canDonate-card':'item.value !==0'}" [dragData]="item"  draggable [dragScope]="'drink'">
+        <div >
+          {{item.type}}
+        </div>
+        <div class="value-box">
+          {{item.value}}
+        </div>
+      </mat-card>
+      <mat-card *ngIf="!item.canDonate" class="canNotDonate-Card d-flex justify-content-between">
+          <div >
+              {{item.type}}
+            </div>
+          <div>
+              {{item.value}}
+            </div>
+          </mat-card>
+        </div>
+  </div>
+</div>
+<div class="d-flex justify-content-between" >
+    <div class="enqiry-form">
+        <span>Enquiry-Form</span>
+        <form class="d-flex flex-column" [formGroup]="enquiryForm" (submit)="check()">
+          <mat-form-field >
+            <input matInput placeholder="type the blood group you want" formControlName="type">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="ammount" formControlName="value">
+          </mat-form-field>  
+          <button type="submit" mat-raised-button color="primary" >Check</button>          
+        </form>
+      </div>
+      <div style="width: 20%; padding-right: 2%">
+        <mat-card class="need-card d-flex flex-column justify-content-around align-items-center" droppable [dropScope]="'drink'" (onDrop)="onItemDrop($event)">
+          <div *ngIf="need">needed blood :{{need}}</div>
+          <div style="bottom: 0px">drop the blood here</div>
+        </mat-card>
+      </div> 
+</div>
+
+
