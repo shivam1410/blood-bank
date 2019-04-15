@@ -12,6 +12,7 @@ export class UserComponent implements OnInit {
 
   enquiryForm: FormGroup;
   need: number;
+  collectedBlood: number = 0;
   bloodData: any[];
   constructor(private fireService: FirebaseService) {
     this.enquiryForm = new FormGroup({
@@ -44,6 +45,7 @@ export class UserComponent implements OnInit {
       }
   }
   check() {
+    this.collectedBlood = 0;
     this.need = this.enquiryForm.controls.value.value;
     if(this.enquiryForm.controls.type.value === 'O+')
     {
@@ -124,6 +126,7 @@ export class UserComponent implements OnInit {
     if (this.need <= data['value']) {
       data['value'] = data['value'] - this.need;
       this.updatedBlood.push({[data['type']]:{value:data['value']}});
+      this.collectedBlood = this.need;
       this.need = 0;
       this.enquiryForm.controls.value.patchValue(0);
       this.fireService.updateValues(this.updatedBlood)
@@ -131,6 +134,7 @@ export class UserComponent implements OnInit {
     }
     if (this.need > data['value']) {
       this.need = this.need - data['value'];
+      this.collectedBlood = this.collectedBlood + data['value'];
       data['value'] = 0;
       this.updatedBlood.push({[data['type']]:{value:data['value']}});
       this.enquiryForm.controls.value.patchValue(this.need);

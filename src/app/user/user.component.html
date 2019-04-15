@@ -36,15 +36,20 @@
             <input matInput placeholder="type the blood group you want" formControlName="type">
           </mat-form-field>
           <mat-form-field>
-            <input matInput placeholder="ammount" formControlName="value">
+            <input matInput placeholder="mount" formControlName="value">
           </mat-form-field>  
           <button type="submit" mat-raised-button color="primary" >Check</button>          
         </form>
       </div>
       <div style="width: 20%; padding-right: 2%">
         <mat-card class="need-card d-flex flex-column justify-content-around align-items-center" droppable [dropScope]="'drink'" (onDrop)="onItemDrop($event)">
-          <div *ngIf="need">needed blood :{{need}}</div>
-          <div style="bottom: 0px">drop the blood here</div>
+          <div *ngIf="collectedBlood">
+            <mat-card class="d-flex flex-column">
+              <span>needed blood :{{need}}</span>
+              <span>blood collected: {{collectedBlood}}</span>
+            </mat-card>
+          </div>
+          <div style="bottom: 0px">drop zone</div>
         </mat-card>
       </div> 
 </div>

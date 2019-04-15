@@ -125,5 +125,5 @@
       }
     }
   },
-  "defaultProject": "blood-bank"
+  "defaultProject": "dist/blood-bank"
 }
