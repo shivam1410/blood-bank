@@ -1,6 +1,10 @@
+<div class="jumbotron" style="padding:45px 0px">
+  <h4 class="text-center">Blood Bottles</h4>
+</div>
+
+
 <div style="max-width: 100vh;" class="container">
   <div class="row" style="width: 100%">
-   <h5>Blood bottles parallel test</h5>
     <div *ngFor="let item of bloodData" class="blood-card">
       <mat-card *ngIf="item.canDonate && !item.value" class=" d-flex justify-content-between"  [ngClass]="{'notEnoughBlood': 'item.value === 0' }">
         <div>
