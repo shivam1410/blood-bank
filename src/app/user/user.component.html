@@ -44,10 +44,15 @@
       <div style="width: 20%; padding-right: 2%">
         <mat-card class="need-card d-flex flex-column justify-content-around align-items-center" droppable [dropScope]="'drink'" (onDrop)="onItemDrop($event)">
           <div *ngIf="collectedBlood">
-            <mat-card class="d-flex flex-column">
-              <span>needed blood :{{need}}</span>
-              <span>blood collected: {{collectedBlood}}</span>
-            </mat-card>
+            <div *ngFor= "let blood of collectedBloodList">
+                <mat-card class="d-flex flex-column">
+                    <span>{{blood.type}}: {{blood.value}}</span>
+                </mat-card>
+            </div>
+            <!-- <mat-card class="d-flex flex-column">
+              <span>needed blood : {{need}}</span>
+              <span>collected blood: {{collectedBlood}}</span>
+            </mat-card> -->
           </div>
           <div style="bottom: 0px">drop zone</div>
         </mat-card>
