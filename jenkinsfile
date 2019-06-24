@@ -13,6 +13,6 @@
      }
 
      stage('Deploy'){
-         firebase deploy --project blood-bank-245a1 --token '1/gk57y7fnNXIGQ0JP2xfDOkfYpqItXjYGFtEBp6wsYNc'"
+        sh "firebase deploy --project blood-bank-245a1 --token '1/gk57y7fnNXIGQ0JP2xfDOkfYpqItXjYGFtEBp6wsYNc'"
      }
  }
