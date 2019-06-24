@@ -5,6 +5,7 @@
 
      stage('install node module'){
          sh "npm install"
+	 sh "npm i -g firebase-tools"
      }
 
      stage('build'){
@@ -12,7 +13,6 @@
      }
 
      stage('Deploy'){
-         sh "npm install -D firebase-tools"
-         sh "firebase deploy --project 'to-do-18eaf' --token '1/m_6llVOgbUZQsu6LKuEA3Y1q8NcqQ9Ce6K7sRnFYM2Y'"
+         firebase deploy --project blood-bank-245a1 --token '1/gk57y7fnNXIGQ0JP2xfDOkfYpqItXjYGFtEBp6wsYNc'"
      }
  }
